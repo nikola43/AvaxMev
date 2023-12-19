@@ -98,6 +98,7 @@ export const colors = {
   networkEthereumSoft: 'rgba(98, 126, 234, 0.16)',
   networkBase: '#0052FF',
   //NEW COLORS FOR SPORE - need to define light/dark here cause they are root colors now (different system)
+  orange: '#e05403',
   neutral1_dark: '#FFFFFF',
   neutral2_dark: '#9B9B9B',
   neutral3_dark: '#5E5E5E',
@@ -158,7 +159,7 @@ export const darkTheme = {
   ...commonTheme,
 
   background: colors.black,
-
+  orange: colors.orange,
   neutral1: colors.neutral1_dark,
   neutral2: colors.neutral2_dark,
   neutral3: colors.neutral3_dark,
@@ -180,7 +181,7 @@ export const lightTheme: Theme = {
   ...commonTheme,
 
   background: colors.white,
-
+  orange: colors.orange,
   neutral1: colors.neutral1_light,
   neutral2: colors.neutral2_light,
   neutral3: colors.neutral3_light,

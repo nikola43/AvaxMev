@@ -566,9 +566,9 @@ export function SwapForm({ disableTokenInputs = false, onCurrencyChange }: SwapF
                 onSwitchTokens(inputTokenHasTax, formattedAmounts[dependentField])
                 maybeLogFirstSwapAction(trace)
               }}
-              color={theme.neutral1}
+              color={theme.white}
             >
-              <ArrowDown size="16" color={theme.neutral1} />
+              <ArrowDown size="16" color={theme.white} />
             </ArrowContainer>
           </TraceEvent>
         </ArrowWrapper>

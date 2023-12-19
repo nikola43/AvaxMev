@@ -63,9 +63,9 @@ const CurrencySelect = styled(ButtonGray)<{
   animateShake?: boolean
 }>`
   align-items: center;
-  background-color: ${({ selected, theme }) => (selected ? theme.surface1 : theme.accent1)};
+  background-color: ${({ selected, theme }) => (selected ? theme.surface1 : theme.orange)};
   opacity: ${({ disabled }) => (!disabled ? 1 : 0.4)};
-  color: ${({ selected, theme }) => (selected ? theme.neutral1 : theme.white)};
+  color: ${({ selected, theme }) => (selected ? theme.orange : theme.white)};
   cursor: pointer;
   height: 36px;
   border-radius: 18px;
@@ -83,7 +83,7 @@ const CurrencySelect = styled(ButtonGray)<{
 
   &:hover,
   &:active {
-    background-color: ${({ theme, selected }) => (selected ? theme.surface2 : theme.accent1)};
+    background-color: ${({ theme, selected }) => (selected ? theme.surface2 : theme.orange)};
   }
 
   &:before {
@@ -147,13 +147,13 @@ const InputRow = styled.div`
 const LabelRow = styled.div`
   ${flexRowNoWrap};
   align-items: center;
-  color: ${({ theme }) => theme.neutral2};
+  color: ${({ theme }) => theme.orange};
   font-size: 0.75rem;
   line-height: 1rem;
 
   span:hover {
     cursor: pointer;
-    color: ${({ theme }) => darken(0.2, theme.neutral2)};
+    color: ${({ theme }) => darken(0.2, theme.orange)};
   }
 `
 
@@ -213,6 +213,7 @@ const StyledNumericalInput = styled(NumericalInput)<{ $loading: boolean }>`
   font-size: 36px;
   font-weight: 485;
   max-height: 44px;
+  color: #e05403;
 `
 
 interface SwapCurrencyInputPanelProps {

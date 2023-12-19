@@ -124,15 +124,14 @@ const Text = styled.p`
 `
 
 const StyledConnectButton = styled.button`
-  background-color: transparent;
+  background-color: #e05403;
   border: none;
-  border-top-left-radius: ${FULL_BORDER_RADIUS}px;
-  border-bottom-left-radius: ${FULL_BORDER_RADIUS}px;
+  border-radius: ${FULL_BORDER_RADIUS}px;
   cursor: pointer;
   font-weight: 535;
   font-size: 16px;
   padding: 10px 12px;
-  color: inherit;
+  color: white;
 `
 
 function Web3StatusInner() {

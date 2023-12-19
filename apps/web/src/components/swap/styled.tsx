@@ -70,9 +70,10 @@ export const ArrowWrapper = styled.div<{ clickable: boolean }>`
   margin-bottom: -18px;
   margin-left: auto;
   margin-right: auto;
-  background-color: ${({ theme }) => theme.surface2};
-  border: 4px solid;
-  border-color: ${({ theme }) => theme.surface1};
+  background-color: ${({ theme }) => theme.orange};
+  border: 1px solid;
+  border-color: ${({ theme }) => theme.white};
+  color: white;
 
   z-index: 2;
   ${({ clickable }) =>
@@ -163,6 +164,10 @@ export const SwapSection = styled.div`
   font-size: 14px;
   font-weight: 500;
   height: 120px;
+  background-color: #383838;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 gray;
   line-height: 20px;
   padding: 16px;
   position: relative;

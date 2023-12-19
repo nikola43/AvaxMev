@@ -19,14 +19,15 @@ export const PageWrapper = styled.div`
     padding-top: 20px;
   }
 `
-
+const isMobile = window.innerWidth < 904 ? 1 : 0;
 // Mostly copied from `AppBody` but it was getting too hard to maintain backwards compatibility.
 const SwapWrapperOuter = styled.main<{ isDark?: boolean }>`
   position: relative;
   z-index: ${Z_INDEX.default};
-  border: 1px solid ${({ theme }) => theme.surface3};
+  // border: 1px solid ${({ theme }) => theme.surface3};
   transition: transform 250ms ease;
   border-radius: 24px;
+  padding-top: ${isMobile*200}px;
 
   &:before {
     content: ' ';
@@ -40,7 +41,7 @@ const SwapWrapperOuter = styled.main<{ isDark?: boolean }>`
   }
 
   &:hover {
-    border: 1px solid ${({ theme }) => theme.surface3};
+    // border: 1px solid ${({ theme }) => theme.surface3};
   }
 `
 

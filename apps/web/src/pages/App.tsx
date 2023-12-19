@@ -29,6 +29,7 @@ import { getCurrentPageFromLocation } from 'utils/urlRoutes'
 import { getCLS, getFCP, getFID, getLCP, Metric } from 'web-vitals'
 
 import { findRouteByPath, RouteDefinition, routes, useRouterConfig } from './RouteDefinitions'
+import backgroundImg from 'assets/images/background.png'
 
 const AppChrome = lazy(() => import('./AppChrome'))
 
@@ -40,6 +41,10 @@ const BodyWrapper = styled.div<{ bannerIsVisible?: boolean }>`
   padding: ${({ theme }) => theme.navHeight}px 0px 5rem 0px;
   align-items: center;
   flex: 1;
+  background-image: url(${backgroundImg});
+  background-repeat: no-repeat;
+  background-position:left;
+  background-size: cover;
 
   @media only screen and (max-width: ${({ theme }) => `${theme.breakpoint.md}px`}) {
     min-height: calc(100vh - ${({ bannerIsVisible }) => (bannerIsVisible ? UK_BANNER_HEIGHT_MD : 0)}px);
@@ -180,7 +185,7 @@ export default function App() {
           }}
         >
           <UserPropertyUpdater />
-          {renderUkBannner && <UkBanner />}
+          {/* {renderUkBannner && <UkBanner />} */}
           <HeaderWrapper transparent={isHeaderTransparent} bannerIsVisible={renderUkBannner} scrollY={scrollY}>
             <NavBar blur={isHeaderTransparent} />
           </HeaderWrapper>

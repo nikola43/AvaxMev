@@ -48,9 +48,9 @@ export default function SwapHeader() {
           </StyledTextButton>
         )}
       </HeaderButtonContainer>
-      <RowFixed>
+      {/* <RowFixed>
         <SettingsTab autoSlippage={autoSlippage} chainId={chainId} trade={trade.trade} />
-      </RowFixed>
+      </RowFixed> */}
     </StyledSwapHeader>
   )
 }

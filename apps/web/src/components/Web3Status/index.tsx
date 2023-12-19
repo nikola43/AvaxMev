@@ -240,7 +240,7 @@ function Web3StatusInner() {
           onClick={handleWalletDropdownClick}
         >
           <StyledConnectButton tabIndex={-1} data-testid="navbar-connect-wallet">
-            <Trans>Connect</Trans>
+            <Trans>Connect Wallet</Trans>
           </StyledConnectButton>
         </Web3StatusConnectWrapper>
       </TraceEvent>

@@ -104,7 +104,8 @@ export default function App() {
   const routerConfig = useRouterConfig()
 
   const originCountry = useAppSelector((state: AppState) => state.user.originCountry)
-  const renderUkBannner = Boolean(originCountry) && originCountry === 'GB'
+  // const renderUkBannner = Boolean(originCountry) && originCountry === 'GB'
+  const renderUkBannner = false
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -166,7 +167,7 @@ export default function App() {
           you can set it later in the page component itself, since react-helmet prefers the most recently rendered title.
         */}
         <Helmet>
-          <title>{findRouteByPath(location.pathname)?.staticTitle ?? 'Uniswap Interface'}</title>
+          <title>{findRouteByPath(location.pathname)?.staticTitle ?? 'Bear Swap'}</title>
         </Helmet>
         <StatsigProvider
           user={statsigUser}

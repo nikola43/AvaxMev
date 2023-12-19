@@ -478,14 +478,14 @@ export function SwapForm({ disableTokenInputs = false, onCurrencyChange }: SwapF
 
   return (
     <>
-      <TokenSafetyModal
+      {/* <TokenSafetyModal
         isOpen={importTokensNotInDefault.length > 0 && !dismissTokenWarning}
         tokenAddress={importTokensNotInDefault[0]?.address}
         secondTokenAddress={importTokensNotInDefault[1]?.address}
         onContinue={handleConfirmTokenWarning}
         onCancel={handleDismissTokenWarning}
         showCancel={true}
-      />
+      /> */}
       {trade && showConfirm && isNewSwapFlowEnabled && (
         <ConfirmSwapModalV2
           trade={trade}

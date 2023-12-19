@@ -12,8 +12,9 @@ export type SVGProps = React.SVGProps<SVGSVGElement> & {
 
 export const UniIcon = (props: SVGProps) => (
   <Container>
-    {HolidayUniIcon(props) !== null ? (
-      <HolidayUniIcon {...props} />
+    <HolidayUniIcon {...props} />
+    {/* {HolidayUniIcon(props) !== null ? (
+      
     ) : (
       <svg {...props} fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -23,7 +24,7 @@ export const UniIcon = (props: SVGProps) => (
           fill="currentColor"
         />
       </svg>
-    )}
+    )} */}
   </Container>
 )
 

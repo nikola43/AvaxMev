@@ -8,7 +8,7 @@ export const logoContainer = style([
     display: 'flex',
     marginRight: '12',
     alignItems: 'center',
-    cursor: 'pointer',
+    cursor: 'pointer', 
   }),
 ])
 
@@ -16,6 +16,8 @@ export const logo = style([
   sprinkles({
     display: 'block',
     color: 'accent1',
+    marginTop: '20',
+    marginLeft: '20'
   }),
 ])
 

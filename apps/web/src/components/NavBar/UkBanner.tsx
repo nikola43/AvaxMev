@@ -70,13 +70,14 @@ export function UkBanner() {
   const openDisclaimer = useOpenModal(ApplicationModal.UK_DISCLAIMER)
 
   return (
-    <BannerWrapper>
-      <BannerTextWrapper lineHeight="24px">{t`UK disclaimer:` + ' ' + bannerText}</BannerTextWrapper>
-      <ReadMoreWrapper>
-        <ThemedText.BodySecondary lineHeight="24px" color="accent1" onClick={openDisclaimer}>
-          <Trans>Read more</Trans>
-        </ThemedText.BodySecondary>
-      </ReadMoreWrapper>
-    </BannerWrapper>
+    <></>
+    // <BannerWrapper>
+    //   <BannerTextWrapper lineHeight="24px">{t`UK disclaimer:` + ' ' + bannerText}</BannerTextWrapper>
+    //   <ReadMoreWrapper>
+    //     <ThemedText.BodySecondary lineHeight="24px" color="accent1" onClick={openDisclaimer}>
+    //       <Trans>Read more</Trans>
+    //     </ThemedText.BodySecondary>
+    //   </ReadMoreWrapper>
+    // </BannerWrapper>
   )
 }

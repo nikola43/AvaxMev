@@ -66,7 +66,7 @@ export const PageTabs = () => {
 
   return (
     <>
-      <MenuItem href="/swap" isActive={pathname.startsWith('/swap')}>
+      {/* <MenuItem href="/swap" isActive={pathname.startsWith('/swap')}>
         <Trans>Swap</Trans>
       </MenuItem>
       {infoExplorePageEnabled ? (
@@ -90,7 +90,7 @@ export const PageTabs = () => {
       </Box>
       <Box marginY="4">
         <MenuDropdown />
-      </Box>
+      </Box> */}
     </>
   )
 }
@@ -121,11 +121,11 @@ const Navbar = ({ blur }: { blur: boolean }) => {
           <Box className={styles.leftSideContainer}>
             <Box className={styles.logoContainer}>
               <UniIcon
-                width="48"
-                height="48"
+                width="211"
+                height="90"
                 data-testid="uniswap-logo"
                 className={styles.logo}
-                onClick={handleUniIconClick}
+                // onClick={handleUniIconClick}
               />
             </Box>
             {!isNftPage && (
@@ -137,19 +137,19 @@ const Navbar = ({ blur }: { blur: boolean }) => {
               <PageTabs />
             </Row>
           </Box>
-          <Box
+          {/* <Box
             className={styles.searchContainer}
             {...(isNavSearchInputVisible && {
               display: 'flex',
             })}
           >
             <SearchBar />
-          </Box>
+          </Box> */}
           <Box className={styles.rightSideContainer}>
             <Row gap="12">
-              <Box position="relative" display={isNavSearchInputVisible ? 'none' : { sm: 'flex' }}>
+              {/* <Box position="relative" display={isNavSearchInputVisible ? 'none' : { sm: 'flex' }}>
                 <SearchBar />
-              </Box>
+              </Box> */}
               {isNftPage && sellPageState !== ProfilePageStateType.LISTING && <Bag />}
               {!isNftPage && (
                 <Box display={{ sm: 'none', lg: 'flex' }}>

@@ -7,9 +7,9 @@ import { useActiveAccountAddressWithThrow } from 'wallet/src/features/wallet/hoo
 export const exampleDisconnectedNotification = {
   type: 2,
   // address: '0x...',
-  dappName: 'Uniswap Interface',
+  dappName: 'Bear Swap',
   event: 1,
-  imageUrl: 'https://app.uniswap.org/favicon.png',
+  imageUrl: '/favicon.png',
   hideDelay: 3000,
 }
 

@@ -88,7 +88,7 @@ export interface RouteDefinition {
 function createRouteDefinition(route: Partial<RouteDefinition>): RouteDefinition {
   return {
     getElement: () => null,
-    staticTitle: 'Uniswap Interface',
+    staticTitle: 'Bear Swap',
     enabled: () => true,
     path: '/',
     nestedPaths: [],
@@ -98,12 +98,17 @@ function createRouteDefinition(route: Partial<RouteDefinition>): RouteDefinition
 }
 
 export const routes: RouteDefinition[] = [
+  // createRouteDefinition({
+  //   path: '/',
+  //   staticTitle: t`Bear Swap`,
+  //   getElement: (args) => {
+  //     return args.browserRouterEnabled && args.hash ? <Navigate to={args.hash.replace('#', '')} replace /> : <Landing />
+  //   },
+  // }),
   createRouteDefinition({
     path: '/',
-    staticTitle: t`Trade crypto and NFTs on Uniswap`,
-    getElement: (args) => {
-      return args.browserRouterEnabled && args.hash ? <Navigate to={args.hash.replace('#', '')} replace /> : <Landing />
-    },
+    staticTitle: t`Bear Swap`,
+    getElement: () => <Swap />,
   }),
   createRouteDefinition({
     path: '/explore',
@@ -177,7 +182,7 @@ export const routes: RouteDefinition[] = [
   createRouteDefinition({
     path: '/swap',
     getElement: () => <Swap />,
-    staticTitle: t`Trade crypto and NFTs on Uniswap`,
+    staticTitle: t`Bear Swap`,
   }),
   createRouteDefinition({
     path: '/pool/v2/find',

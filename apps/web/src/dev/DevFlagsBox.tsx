@@ -77,17 +77,18 @@ export default function DevFlagsBox() {
   const toggleOpen = () => setIsOpen((open) => !open)
 
   return (
-    <Box>
-      <TopBar onClick={toggleOpen}>
-        {isOpen ? '😺👇' : '😿☝️'}
-        {isOpen && (
-          <ThemedText.SubHeader>
-            {isStagingEnv() && 'Staging build overrides'}
-            {isDevelopmentEnv() && 'Development build overrides'}
-          </ThemedText.SubHeader>
-        )}
-      </TopBar>
-      {isOpen && (hasOverrides ? overrides : <ThemedText.LabelSmall>No overrides</ThemedText.LabelSmall>)}
-    </Box>
+    <></>
+    // <Box>
+    //   <TopBar onClick={toggleOpen}>
+    //     {isOpen ? '😺👇' : '😿☝️'}
+    //     {isOpen && (
+    //       <ThemedText.SubHeader>
+    //         {isStagingEnv() && 'Staging build overrides'}
+    //         {isDevelopmentEnv() && 'Development build overrides'}
+    //       </ThemedText.SubHeader>
+    //     )}
+    //   </TopBar>
+    //   {isOpen && (hasOverrides ? overrides : <ThemedText.LabelSmall>No overrides</ThemedText.LabelSmall>)}
+    // </Box>
   )
 }

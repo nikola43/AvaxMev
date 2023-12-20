@@ -84,14 +84,13 @@ export default function ShareButton({ currency }: { currency: Currency }) {
   useDisableScrolling(open)
 
   const isInfoTDPEnabled = useInfoTDPEnabled()
-  const REACT_APP_HOST_NAME = process.env.REACT_APP_HOST_NAME as string;
 
   const shareTweet = () => {
     toggleShare()
     window.open(
       `https://twitter.com/intent/tweet?text=Check%20out%20${currency.name}%20(${
         currency.symbol
-      })%20${REACT_APP_HOST_NAME}/${isInfoTDPEnabled ? 'explore/' : ''}tokens/${chainIdToBackendName(
+      })%20https://app.uniswap.org/${isInfoTDPEnabled ? 'explore/' : ''}tokens/${chainIdToBackendName(
         currency.chainId
       ).toLowerCase()}/${address}%20via%20@uniswap`,
       'newwindow',

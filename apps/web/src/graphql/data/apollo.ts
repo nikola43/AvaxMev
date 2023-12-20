@@ -6,12 +6,13 @@ if (!GRAPHQL_URL) {
   throw new Error('AWS URL MISSING FROM ENVIRONMENT')
 }
 
+const REACT_APP_HOST_NAME = process.env.REACT_APP_HOST_NAME as string;
 export const apolloClient = new ApolloClient({
   connectToDevTools: true,
   uri: GRAPHQL_URL,
   headers: {
     'Content-Type': 'application/json',
-    Origin: 'https://app.uniswap.org',
+    Origin: REACT_APP_HOST_NAME,
   },
   cache: new InMemoryCache({
     typePolicies: {

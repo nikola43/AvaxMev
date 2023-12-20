@@ -24,7 +24,8 @@ if (typeof globalThis.TextEncoder === 'undefined') {
 
 // Sets origin to the production origin, because some tests depend on this.
 // This prevents each test file from needing to set this manually.
-globalThis.origin = 'https://app.uniswap.org'
+const REACT_APP_HOST_NAME = process.env.REACT_APP_HOST_NAME as string;
+globalThis.origin = `${REACT_APP_HOST_NAME}`;
 
 globalThis.matchMedia =
   globalThis.matchMedia ||

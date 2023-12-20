@@ -28,7 +28,7 @@ const nftTopCollectionsQuery = `
     }
   }
 `
-
+const REACT_APP_HOST_NAME = process.env.REACT_APP_HOST_NAME;
 fs.readFile('./public/tokens-sitemap.xml', 'utf8', async (err, data) => {
   const tokenURLs = {}
   try {
@@ -48,7 +48,7 @@ fs.readFile('./public/tokens-sitemap.xml', 'utf8', async (err, data) => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Origin: 'https://app.uniswap.org',
+          Origin: `${REACT_APP_HOST_NAME}`,
         },
         body: JSON.stringify({ query: getTopTokensQuery(chainName) }),
       })
@@ -56,7 +56,7 @@ fs.readFile('./public/tokens-sitemap.xml', 'utf8', async (err, data) => {
       const tokenAddresses = tokensJSON.data.topTokens.map((token) => token.address.toLowerCase())
 
       tokenAddresses.forEach((address) => {
-        const tokenURL = `https://app.uniswap.org/tokens/${chainName.toLowerCase()}/${address}`
+        const tokenURL = `${REACT_APP_HOST_NAME}/tokens/${chainName.toLowerCase()}/${address}`
         if (!(tokenURL in tokenURLs)) {
           sitemap.urlset.url.push({
             loc: [tokenURL],
@@ -104,14 +104,14 @@ fs.readFile('./public/nfts-sitemap.xml', 'utf8', async (err, data) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Origin: 'https://app.uniswap.org',
+        Origin: `${REACT_APP_HOST_NAME}`,
       },
       body: JSON.stringify({ query: nftTopCollectionsQuery }),
     })
     const nftJSON = await nftResponse.json()
     const collectionAddresses = nftJSON.data.topCollections.edges.map((edge) => edge.node.nftContracts[0].address)
     collectionAddresses.forEach((address) => {
-      const collectionURL = `https://app.uniswap.org/nfts/collection/${address}`
+      const collectionURL = `${REACT_APP_HOST_NAME}/nfts/collection/${address}`
       if (!(collectionURL in collectionURLs)) {
         sitemap.urlset.url.push({
           loc: [collectionURL],

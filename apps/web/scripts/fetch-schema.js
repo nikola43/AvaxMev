@@ -9,8 +9,9 @@ const thegraphConfig = require('../graphql.thegraph.config')
 
 const exec = promisify(child_process.exec)
 
+const REACT_APP_HOST_NAME = process.env.REACT_APP_HOST_NAME;
 function fetchSchema(url, outputFile) {
-  exec(`npx --silent get-graphql-schema --h Origin=https://app.uniswap.org ${url}`)
+  exec(`npx --silent get-graphql-schema --h Origin=${REACT_APP_HOST_NAME} ${url}`)
     .then(({ stderr, stdout }) => {
       if (stderr) {
         throw new Error(stderr)

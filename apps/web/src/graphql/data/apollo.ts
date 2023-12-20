@@ -13,6 +13,7 @@ export const apolloClient = new ApolloClient({
   headers: {
     'Content-Type': 'application/json',
     Origin: REACT_APP_HOST_NAME,
+    'Access-Control-Allow-Origin': '*'
   },
   cache: new InMemoryCache({
     typePolicies: {

@@ -41,11 +41,11 @@ if (!sentryUserId) {
 }
 Sentry.setUser({ id: sentryUserId })
 
-initializeAnalytics(AMPLITUDE_DUMMY_KEY, OriginApplication.INTERFACE, {
-  proxyUrl: process.env.REACT_APP_AMPLITUDE_PROXY_URL,
-  defaultEventName: SharedEventName.PAGE_VIEWED,
-  commitHash: process.env.REACT_APP_GIT_COMMIT_HASH,
-  isProductionEnv: isProductionEnv(),
-  debug: isDevelopmentEnv(),
-  reportOriginCountry: (country: string) => store.dispatch(setOriginCountry(country)),
-})
+// initializeAnalytics(AMPLITUDE_DUMMY_KEY, OriginApplication.INTERFACE, {
+//   proxyUrl: process.env.REACT_APP_AMPLITUDE_PROXY_URL,
+//   defaultEventName: SharedEventName.PAGE_VIEWED,
+//   commitHash: process.env.REACT_APP_GIT_COMMIT_HASH,
+//   isProductionEnv: isProductionEnv(),
+//   debug: isDevelopmentEnv(),
+//   reportOriginCountry: (country: string) => store.dispatch(setOriginCountry(country)),
+// })

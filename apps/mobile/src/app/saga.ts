@@ -57,7 +57,7 @@ const sagas = [
   pendingAccountSaga,
   restoreMnemonicCompleteWatcher,
   signWcRequestSaga,
-  telemetrySaga,
+  // telemetrySaga,
   walletConnectSaga,
 ]
 

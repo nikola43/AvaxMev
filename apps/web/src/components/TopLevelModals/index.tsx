@@ -35,7 +35,7 @@ export default function TopLevelModals() {
       <TransactionCompleteModal />
       <AirdropModal />
       <FiatOnrampModal />
-      <UkDisclaimerModal />
+      {/* <UkDisclaimerModal /> */}
       {shouldShowDevFlags && <DevFlagsBox />}
     </>
   )

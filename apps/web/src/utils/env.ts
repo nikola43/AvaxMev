@@ -38,7 +38,7 @@ export function isBrowserRouterEnabled(): boolean {
 }
 
 function isLocalhost({ hostname }: { hostname: string }): boolean {
-  return hostname === 'localhost'
+  return hostname === 'localhost' || hostname === process.env.REACT_APP_HOST_NAME
 }
 
 export function isSentryEnabled(): boolean {

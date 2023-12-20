@@ -107,10 +107,10 @@ function InfoSection() {
     <InfoSectionWrapper>
       <AutoColumn gap="4px">
         <ThemedText.SubHeaderSmall color="neutral1">
-          <Trans>Don&apos;t have a Uniswap wallet?</Trans>
+          <Trans>Don&apos;t have a BearSwap wallet?</Trans>
         </ThemedText.SubHeaderSmall>
         <ThemedText.BodySmall color="neutral2">
-          <Trans>Safely store and swap tokens with the Uniswap app. Available on iOS and Android.</Trans>
+          <Trans>Safely store and swap tokens with the BearSwap app. Available on iOS and Android.</Trans>
         </ThemedText.BodySmall>
       </AutoColumn>
       <Column>

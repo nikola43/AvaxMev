@@ -47,7 +47,7 @@ export async function validateTokens(json: TokenInfo[]): Promise<TokenInfo[]> {
   }
 }
 
-/**
+/** 
  * Validates a token list.
  * @param json the TokenList to validate
  */

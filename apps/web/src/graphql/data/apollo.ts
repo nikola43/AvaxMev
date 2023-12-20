@@ -12,7 +12,6 @@ export const apolloClient = new ApolloClient({
   headers: {
     'Content-Type': 'application/json',
     Origin: 'https://app.uniswap.org',
-    'Access-Control-Allow-Origin': '*'
   },
   cache: new InMemoryCache({
     typePolicies: {

@@ -4,10 +4,9 @@ import { UNIVERSAL_ROUTER_CREATION_BLOCK } from '@uniswap/universal-router-sdk'
 /* eslint-env node */
 require('dotenv').config()
 
-const REACT_APP_HOST_NAME = process.env.REACT_APP_HOST_NAME;
 const forkingConfig = {
   httpHeaders: {
-    Origin: `${REACT_APP_HOST_NAME}`, // infura allowlists requests by origin---------localhost:3000
+    Origin: `localhost:3000`, // infura allowlists requests by origin---------localhost:3000
   },
 }
 

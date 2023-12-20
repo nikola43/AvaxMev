@@ -7,8 +7,6 @@
 /src/locales/**/*.js
 /src/locales/**/*.po
 
-# generated files
-/src/**/__generated__
 
 # schema
 schema.graphql

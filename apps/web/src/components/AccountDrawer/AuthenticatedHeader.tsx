@@ -266,7 +266,7 @@ export default function AuthenticatedHeader({ account, openSettings }: { account
         </IconContainer>
       </HeaderWrapper>
       <PortfolioDrawerContainer>
-        {totalBalance !== undefined ? (
+        {/* {totalBalance !== undefined ? (
           <FadeInColumn gap="xs">
             <ThemedText.HeadlineLarge fontWeight={535} data-testid="portfolio-total-balance">
               {formatNumber({
@@ -293,8 +293,8 @@ export default function AuthenticatedHeader({ account, openSettings }: { account
             <LoadingBubble height="44px" width="170px" />
             <LoadingBubble height="16px" width="100px" margin="4px 0 20px 0" />
           </Column>
-        )}
-        {!shouldDisableNFTRoutes && (
+        )} */}
+        {/* {!shouldDisableNFTRoutes && (
           <HeaderButton
             data-testid="nft-view-self-nfts"
             onClick={navigateToProfile}
@@ -354,7 +354,7 @@ export default function AuthenticatedHeader({ account, openSettings }: { account
           <UNIButton size={ButtonSize.medium} emphasis={ButtonEmphasis.medium} onClick={openNftModal}>
             <Trans>Claim Uniswap NFT Airdrop</Trans>
           </UNIButton>
-        )}
+        )} */}
       </PortfolioDrawerContainer>
     </AuthenticatedHeaderWrapper>
   )

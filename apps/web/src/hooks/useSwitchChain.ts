@@ -72,20 +72,23 @@ export function useSwitchChain() {
                     rpcUrls: [getRpcUrl(chainId)],
                     nativeCurrency: info.nativeCurrency,
                     blockExplorerUrls: [info.explorer],
-                  }  
-                await connector.provider?.request({
-                  method: 'wallet_addEthereumChain',
-                  params: [
-                    addChainParameter_spec
-                  ]
-                });
-  
-                await connector.provider?.request({
-                  method: 'wallet_switchEthereumChain',
-                  params: [{
-                    chainId: `0x${chainId.toString(16)}`,
-                  }]
-                });
+                  }
+                  
+                if (connector.provider) {
+                  await connector.provider?.request({
+                    method: 'wallet_addEthereumChain',
+                    params: [
+                      addChainParameter_spec
+                    ]
+                  });
+    
+                  await connector.provider?.request({
+                    method: 'wallet_switchEthereumChain',
+                    params: [{
+                      chainId: `0x${chainId.toString(16)}`,
+                    }]
+                  });
+                }
                 const addChainParameter = {
                   chainId,
                   chainName: bearSwapChainName,

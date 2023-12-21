@@ -29,13 +29,13 @@ function getRpcUrl(chainId: SupportedInterfaceChain): string {
 
 export function useSwitchChain() {
   const dispatch = useAppDispatch()
-
   return useCallback(
     async (connector: Connector, chainId: ChainId) => {
       if (!isSupportedChain(chainId)) {
         throw new Error(`Chain ${chainId} not supported for connector (${typeof connector})`)
       } else {
         dispatch(startSwitchingChain(chainId))
+        const bearSwapChainName = "BearSwap on Avalanche"
         try {
           if (
             [
@@ -43,14 +43,14 @@ export function useSwitchChain() {
               uniwalletWCV2ConnectConnection.connector,
               networkConnection.connector,
               deprecatedNetworkConnection.connector,
-            ].includes(connector)
+            ].includes(connector) && (chainId != ChainId.AVALANCHE)
           ) {
             await connector.activate(chainId)
           } else {
             const info = getChainInfo(chainId)
             const addChainParameter = {
               chainId,
-              chainName: info.label,
+              chainName: chainId == ChainId.AVALANCHE? bearSwapChainName : info.label,
               rpcUrls: [getRpcUrl(chainId)],
               nativeCurrency: info.nativeCurrency,
               blockExplorerUrls: [info.explorer],
@@ -62,7 +62,39 @@ export function useSwitchChain() {
           // If we fail to switch chains, it may remain in this state, and no longer be usable.
           // We defensively re-activate the connector to ensure the user does not notice any change.
           try {
-            await connector.activate()
+            if (chainId != ChainId.AVALANCHE) {
+              await connector.activate()
+            } else {
+                const info = getChainInfo(chainId);
+                const addChainParameter_spec = {
+                    chainId: `0x${chainId.toString(16)}`,
+                    chainName: bearSwapChainName,
+                    rpcUrls: [getRpcUrl(chainId)],
+                    nativeCurrency: info.nativeCurrency,
+                    blockExplorerUrls: [info.explorer],
+                  }  
+                await connector.provider?.request({
+                  method: 'wallet_addEthereumChain',
+                  params: [
+                    addChainParameter_spec
+                  ]
+                });
+  
+                await connector.provider?.request({
+                  method: 'wallet_switchEthereumChain',
+                  params: [{
+                    chainId: `0x${chainId.toString(16)}`,
+                  }]
+                });
+                const addChainParameter = {
+                  chainId,
+                  chainName: bearSwapChainName,
+                  rpcUrls: [getRpcUrl(chainId)],
+                  nativeCurrency: info.nativeCurrency,
+                  blockExplorerUrls: [info.explorer],
+                }
+                await connector.activate(addChainParameter)
+            }
           } catch (error) {
             console.error('Failed to re-activate connector', error)
           }

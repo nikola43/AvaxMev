@@ -79,7 +79,8 @@ export function FailedNetworkSwitchPopup({ chainId, onClose }: { chainId: ChainI
           </ThemedText.SubHeader>
 
           <ThemedText.BodySmall color="neutral2">
-            <Trans>To use Uniswap on {chainInfo.label}, switch the network in your wallet’s settings.</Trans>
+            {chainId == ChainId.AVALANCHE ? <Trans>To use avalance mev blocker on BearSwap, please click "Connect Wallet" button to connect wallet, especially metamask.</Trans>
+             : <Trans>To use {chainInfo.label}, switch the network in your wallet’s settings.</Trans>}
           </ThemedText.BodySmall>
         </ColumnContainer>
       </RowNoFlex>

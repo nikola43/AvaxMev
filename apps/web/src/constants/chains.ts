@@ -13,7 +13,7 @@ export const CHAIN_IDS_TO_NAMES = {
   [ChainId.OPTIMISM]: 'optimism',
   [ChainId.OPTIMISM_GOERLI]: 'optimism_goerli',
   [ChainId.BNB]: 'bnb',
-  [ChainId.AVALANCHE]: 'avalanche',
+  [ChainId.AVALANCHE]: 'avalanche_mev_blocker',
   [ChainId.BASE]: 'base',
 } as const
 

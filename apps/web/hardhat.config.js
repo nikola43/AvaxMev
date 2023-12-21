@@ -6,7 +6,8 @@ require('dotenv').config()
 
 const forkingConfig = {
   httpHeaders: {
-    Origin: `localhost:3000`, // infura allowlists requests by origin---------localhost:3000
+    // Origin: `localhost:3000`, // infura allowlists requests by origin---------localhost:3000
+    Origin: `localhost:3000`,
   },
 }
 

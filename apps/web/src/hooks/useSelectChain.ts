@@ -30,7 +30,7 @@ export default function useSelectChain() {
         }
       } catch (error) {
         if (!didUserReject(connection, error) && error.code !== -32002 /* request already pending */) {
-          console.error('Failed to switch networks', error)
+          // console.error('Failed to switch networks', error)
           dispatch(
             addPopup({
               content: { failedSwitchNetwork: targetChain, type: PopupType.FailedSwitchNetwork },

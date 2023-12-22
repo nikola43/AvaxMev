@@ -79,8 +79,8 @@ export function FailedNetworkSwitchPopup({ chainId, onClose }: { chainId: ChainI
           </ThemedText.SubHeader>
 
           <ThemedText.BodySmall color="neutral2">
-            {chainId === ChainId.AVALANCHE ? <Trans>To use avalance mev blocker on BearSwap, please click "Connect Wallet" button to connect wallet.</Trans>
-             : <Trans>To use {chainInfo.label}, switch the network in your wallet’s settings.</Trans>}
+            {chainId === ChainId.AVALANCHE ? `To use avalance mev blocker on BearSwap, please click "Connect Wallet" button to connect wallet.`
+             : `To use ${chainInfo.label}, switch the network in your wallet’s settings.`}
           </ThemedText.BodySmall>
         </ColumnContainer>
       </RowNoFlex>

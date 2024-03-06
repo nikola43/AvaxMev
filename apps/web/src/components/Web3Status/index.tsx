@@ -64,13 +64,13 @@ const Web3StatusConnectWrapper = styled.div`
   }
 
   transition: ${({
-    theme: {
-      transition: { duration, timing },
-    },
-  }) => `${duration.fast} color ${timing.in}`};
+  theme: {
+    transition: { duration, timing },
+  },
+}) => `${duration.fast} color ${timing.in}`};
 `
 
-const Web3StatusConnected = styled(Web3StatusGeneric)<{
+const Web3StatusConnected = styled(Web3StatusGeneric) <{
   pending?: boolean
   isClaimAvailable?: boolean
 }>`
@@ -124,7 +124,7 @@ const Text = styled.p`
 `
 
 const StyledConnectButton = styled.button`
-  background-color: #e05403;
+  background-color: #e00403;
   border: none;
   border-radius: ${FULL_BORDER_RADIUS}px;
   cursor: pointer;

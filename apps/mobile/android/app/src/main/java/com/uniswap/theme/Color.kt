@@ -202,7 +202,7 @@ val lightCustomColors = CustomColors(
 )
 
 val darkCustomColors = CustomColors(
-  surface1 = Color(0xFF131313),
+  surface1 = Color(0xFFe5bfbf),
   surface2 = Color(0xFF1B1B1B),
   surface3 = Color(0x1FFFFFFF),
   surface4 = Color(0x33FFFFFF),

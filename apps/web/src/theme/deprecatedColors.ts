@@ -11,7 +11,7 @@ function getDeprecatedTheme(darkMode: boolean) {
     // dont wanna forget these blue yet
     deprecated_blue4: darkMode ? '#153d6f70' : '#C4D9F8',
 
-    deprecated_backgroundScrolledSurface: darkMode ? opacify(72, colors.white) : opacify(72, '#131313'),
+    deprecated_backgroundScrolledSurface: darkMode ? opacify(72, colors.white) : opacify(72, '#e5bfbf'),
 
     deprecated_accentWarning: colors.gold200,
 

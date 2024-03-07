@@ -196,7 +196,7 @@ const sporeDark = {
   sporeWhite: '#FFFFFF',
   sporeBlack: '#000000',
 
-  surface1: '#131313',
+  surface1: '#e5bfbf',
   surface2: '#1B1B1B',
   surface3: '#FFFFFF1F', //1F = 12%
   surface4: '#FFFFFF33', //33 = 20%

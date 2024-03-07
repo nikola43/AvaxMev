@@ -102,7 +102,7 @@ export const colors = {
   neutral1_dark: '#FFFFFF',
   neutral2_dark: '#9B9B9B',
   neutral3_dark: '#5E5E5E',
-  surface1_dark: '#131313',
+  surface1_dark: '#e5bfbf',
   surface2_dark: '#1B1B1B',
   surface3_dark: '#FFFFFF12',
   surface4_dark: '#FFFFFF20',

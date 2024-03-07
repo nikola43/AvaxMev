@@ -64,7 +64,7 @@ export function LandingScreen({ navigation }: Props): JSX.Element {
 
   return (
     // TODO(blocked by MOB-1082): delete bg prop
-    // dark mode onboarding asset needs to be re-exported with #131313 (surface1) as background color
+    // dark mode onboarding asset needs to be re-exported with #e5bfbf (surface1) as background color
     <Screen bg={isDarkMode ? '$sporeBlack' : '$surface1'} edges={['bottom']}>
       <Flex fill gap="$spacing8">
         <Flex shrink height="100%" width="100%">
